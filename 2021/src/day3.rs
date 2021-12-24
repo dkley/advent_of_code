@@ -41,7 +41,7 @@ pub fn _part2(input: &Vec<Vec<char>>) -> i64 {
     let mut common_values = input.clone();
 
     for ndx in 0..12 {
-        let common_position = get_most_common(&common_values, ndx);
+        let common_position = _get_most_common(&common_values, ndx);
         let mut tmp = Vec::new();
         for line in common_values {
             if line[ndx] == common_position {
@@ -63,7 +63,7 @@ pub fn _part2(input: &Vec<Vec<char>>) -> i64 {
 
     common_values = input.clone();
     for ndx in 0..12 {
-        let common_position = get_most_common(&common_values, ndx);
+        let common_position = _get_most_common(&common_values, ndx);
         let mut tmp = Vec::new();
         for line in common_values {
             if line[ndx] != common_position {
@@ -91,7 +91,7 @@ pub fn _part2(input: &Vec<Vec<char>>) -> i64 {
  *     b0111
  *      ^ - mask = 0
  */
-fn get_most_common(readings: &Vec<Vec<char>>, mask: usize) -> char {
+fn _get_most_common(readings: &Vec<Vec<char>>, mask: usize) -> char {
 
     let mut num_ones = 0;
 

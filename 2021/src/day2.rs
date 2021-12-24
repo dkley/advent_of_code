@@ -1,6 +1,7 @@
 use std::fs;
 
 #[derive(Debug)]
+#[allow(dead_code)]
 pub enum _Direction {
     Forward,
     Up,
