@@ -7,7 +7,7 @@ pub fn _parser(file: &str) -> Vec<i64> {
         .collect()
 }
 
-pub fn _part1(input: &Vec<i64>) -> u64 {
+pub fn _part1(input: &Vec<i64>) -> i64 {
     let mut count = 0;
     let mut iter = input.iter();
     let mut prev = iter.next().unwrap();
@@ -23,7 +23,7 @@ pub fn _part1(input: &Vec<i64>) -> u64 {
     count
 }
 
-pub fn _part2(input: &Vec<i64>) -> u64 {
+pub fn _part2(input: &Vec<i64>) -> i64 {
     let mut count = 0;
     let mut iter_back = input.iter();
     let iter_front = input.iter().skip(3);
